@@ -4,8 +4,10 @@ aws eks describe-cluster \
   --output text  (for oidc provider)
 
   eksctl utils associate-iam-oidc-provider \
-  --cluster <cluster-name> \
-  --approve   (if oicd not associated)
+  --region eu-north-1 \
+  --cluster devops-cluster \
+  --approve
+   (if oicd not associated)
 
 
   curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/main/docs/install/iam_policy.json
